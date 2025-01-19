@@ -1,0 +1,168 @@
+/* Reset and Base Styles */
+body, h1, h2, p, a, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+  }
+  
+  /* Header and Contact Section */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #000;
+    color: #ff6b00;
+  }
+  
+  .contact {
+    position: relative;
+  }
+  
+  button {
+    background-color: #ff6b00;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #e65b00;
+  }
+  
+  /* Clickable Phone Number */
+  .clickable {
+    cursor: pointer;
+    color: #ff6b00;
+    font-weight: bold;
+    text-decoration: underline;
+    transition: color 0.3s;
+  }
+  
+  .clickable:hover {
+    color: #e65b00;
+  }
+  
+  /* Copy Message */
+  #copy-message {
+    display: inline-block;
+    margin-left: 10px;
+    color: whitesmoke;
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  #copy-message.visible {
+    opacity: 1;
+  }
+  
+  #copy-message.hidden {
+    opacity: 0;
+  }
+  
+  /* Hero Section */
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    background: #eee;
+  }
+  
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+  
+  .cta-button {
+    background-color: #ff6b00;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .cta-button:hover {
+    background-color: #e65b00;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 10px;
+    background: #000;
+    color: #fff;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    height: 40px; /* Reduced height for the logo */
+    margin-right: 10px;
+  }
+  
+  .logo h1 {
+    font-size: 1rem; /* Adjusted font size of the logo text */
+    color: #fff;
+  }
+  /* Background Section */
+.background-section {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    background: url('logo.png') no-repeat center center/cover; /* Add your background image */
+    filter: blur(0px); /* Slight blur for the background */
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for text contrast */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    padding: 20px;
+  }
+  
+  .main-title {
+    font-size: 3rem; /* Large title */
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .description {
+    font-size: 1.2rem; /* Smaller description */
+    color: rgba(255, 255, 255, 0.8); /* Slight transparency */
+    max-width: 800px;
+    line-height: 1.5;
+  }
+  
+  .cta-button {
+    background-color: #ff6b00;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .cta-button:hover {
+    background-color: #e65b00;
+  }
+  
