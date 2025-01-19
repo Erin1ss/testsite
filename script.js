@@ -22,3 +22,8 @@ document.getElementById("phone-number").addEventListener("click", function () {
     }, 2000);
   });
   
+  // Order call button functionality
+  document.getElementById("order-call").addEventListener("click", function () {
+    alert("Звонок заказан! Мы свяжемся с вами в ближайшее время.");
+  });
+  
