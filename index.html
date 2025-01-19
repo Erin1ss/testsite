@@ -16,7 +16,7 @@
       <p>Работаем по районам РТ</p>
       <p id="phone-number" class="clickable">+7 (937) 000-41-41</p>
       <span id="copy-message" class="hidden">Номер скопирован!</span>
-      <button id="order-call">Заказать звонок</button>
+      <a href="tel:+79370004141" id="order-call" class="cta-button">Заказать звонок</a>
     </div>
   </header>
 
@@ -24,14 +24,12 @@
     <section class="background-section">
       <div class="overlay">
         <h1 class="main-title">Перевозка лежачих больных "от кровати до кровати".</h1>
-        <p1 class="description">Чем занимаемся?:</p>
+        <p class="description">Чем занимаемся?:</p>
         <p class="description">Транспортировка пациента</p>
         <p class="description">Транспортировка лежачего пациента</p>
         <p class="description">Транспортировка пациента на каталке</p>
         <p class="description">Транспортировка пациента на носилках</p>
         <p class="description">Перевозка пациента из больницы домой до кровати</p>
-
-    
       </div>
     </section>
 
@@ -39,9 +37,9 @@
       <div class="hero-content">
         <h2>Почему выбирают нас?</h2>
         <p>Мы предоставляем надёжный и безопасный сервис по всей России.</p>
-        <!-- Updated button with tel: link -->
-        <a href="tel:+79370004141" tabindex="0">
-            <span>+7&nbsp;(937)&nbsp;000-41-41</span></a>
+        <a href="tel:+79370004141" class="cta-button">
+          <span>+7&nbsp;(937)&nbsp;000-41-41</span>
+        </a>
       </div>
     </section>
   </main>
@@ -50,6 +48,30 @@
     <p>&copy; 2025 Санитарный Экспресс. Все права защищены.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    // Copy phone number to clipboard and show "Number copied" message
+    document.getElementById("phone-number").addEventListener("click", function () {
+      const phoneNumber = this.textContent;
+
+      // Create a temporary input to copy the text
+      const tempInput = document.createElement("input");
+      document.body.appendChild(tempInput);
+      tempInput.value = phoneNumber;
+      tempInput.select();
+      document.execCommand("copy");
+      document.body.removeChild(tempInput);
+
+      // Show the "Number copied" message
+      const copyMessage = document.getElementById("copy-message");
+      copyMessage.classList.add("visible");
+      copyMessage.classList.remove("hidden");
+
+      // Hide the message after 2 seconds
+      setTimeout(() => {
+        copyMessage.classList.add("hidden");
+        copyMessage.classList.remove("visible");
+      }, 2000);
+    });
+  </script>
 </body>
 </html>
