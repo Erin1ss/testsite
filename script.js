@@ -27,3 +27,8 @@ document.getElementById("phone-number").addEventListener("click", function () {
     alert("Звонок заказан! Мы свяжемся с вами в ближайшее время.");
   });
   
+  // Order call button functionality
+document.getElementById("order-call").addEventListener("click", function () {
+    window.location.href = "tel:+79370004141"; // Open phone app
+  });
+  
